@@ -1,6 +1,6 @@
 {
   "name": "prettier-plugin-tailwindcss-extra",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Adds Tailwind class sorting to a set of languages that are not yet supported by prettier",
   "license": "MIT",
   "main": "dist/main.js",
