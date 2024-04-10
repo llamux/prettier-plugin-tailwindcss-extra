@@ -1,0 +1,19 @@
+package complex
+
+import (
+	"fmt"
+	"strings"
+)
+
+templ Complex(classThisIsAVeryLongVariableABCDEFGHIJKLMNOPQRSTUVWXYZ int, vals ...string) {
+	<form
+		action={ templ.SafeURL("/") }
+		method="post"
+		class="w-[28rem] max-sm:w-[20rem] mx-auto p-10 max-sm:px-6 bg-black text-white rounded-box"
+	>
+		<h1>{ fmt.Sprint(classThisIsAVeryLongVariableABCDEFGHIJKLMNOPQRSTUVWXYZ) }</h1>
+		<input class="bg-blue" value={ strings.Join(vals, ", ") }/>
+		<input class='p-4 bg-blue \"test\"' value={ tw }/>
+		<button class='p-4 bg-blue'>Submit</button>
+	</form>
+}

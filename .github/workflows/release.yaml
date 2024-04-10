@@ -1,0 +1,38 @@
+name: Release to NPM
+on:
+  release:
+    types: [published]
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+      - name: Use pnpm 🅿️
+        uses: pnpm/action-setup@v2
+        with:
+          version: latest
+      - name: Use Node 20 ✨
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org
+          cache: pnpm
+      - name: Install dependencies 📦️
+        run: pnpm install --frozen-lockfile
+      - name: Build 🔨
+        run: pnpm build
+      - name: Set version to release tag 📝
+        shell: bash
+        run: pnpm version from-git --no-commit-hooks --no-git-tag-version --allow-same-version
+      - name: Publish 🚀
+        shell: bash
+        run: pnpm publish --access public --no-git-checks
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Push version changes to main branch 📤
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Release ${{ github.event.release.tag_name }}"
+          branch: ${{ github.event.repository.default_branch }}
+          file_pattern: package.json
