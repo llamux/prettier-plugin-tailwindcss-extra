@@ -38,7 +38,7 @@ Then add to prettier plugins in `.prettierrc.json` or similar:
 
 ## Parser Configuration
 
-You can configure prettier to use the parser from this plugin on your filetype of choice. Take a look at the [docs for setting the parser option](https://prettier.io/docs/en/configuration#setting-the-parserdocsenoptionshtmlparser-option) in your prettier config for more information. Here is an example config using the `tailwindcss-extra` parser from this plugin to format files with the extension `.ext`:
+You can configure prettier to use the parser from this plugin on your filetype of choice. Take a look at the docs for [setting the parser option in your prettier config](https://prettier.io/docs/en/configuration#setting-the-parserdocsenoptionshtmlparser-option) for more information. Here is an example config using the `tailwindcss-extra` parser from this plugin to format files with the extension `.ext`:
 
 ```json
 {
