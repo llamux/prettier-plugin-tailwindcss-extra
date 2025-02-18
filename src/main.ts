@@ -2,7 +2,7 @@ import { Parser, Printer, SupportLanguage } from "prettier";
 import { AstNode, parse, locStart, locEnd } from "./parser";
 import { print, embed } from "./printer";
 
-const NAME = "tailwindcss-extra";
+const NAME = "tailwindcss-extra-plus";
 
 export const languages: SupportLanguage[] = [
   {

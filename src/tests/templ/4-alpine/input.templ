@@ -1,0 +1,14 @@
+package alpine
+
+templ Alpine() {
+	<div x-data="{item_id: 'hello-world'}">
+		<div
+			:class="item_id.id.toString().startsWith('hello') ? 'font-bold text-sm' : 'cursor-pointer text-xs focus-visible:outline-none'"
+			class="combobox-option inline-flex px-4 py-2"
+		></div>
+		<div
+			x-bind:class="item_id.id.toString().startsWith('hello') ? 'font-bold text-sm' : 'cursor-pointer text-xs focus-visible:outline-none'"
+			class="combobox-option inline-flex px-4 py-2"
+		></div>
+	</div>
+}

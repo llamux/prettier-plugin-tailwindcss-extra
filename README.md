@@ -1,6 +1,6 @@
-# prettier-plugin-tailwindcss-extra
+# prettier-plugin-tailwindcss-extra-plus
 
-`prettier-plugin-tailwindcss-extra` is a [prettier](https://prettier.io) plugin that uses [prettier-plugin-tailwindcss](https://tailwindcss.com/blog/automatic-class-sorting-with-prettier) to enforce the [recommended Tailwind class order](https://tailwindcss.com/blog/automatic-class-sorting-with-prettier#how-classes-are-sorted) for a set of extra languages that are not yet supported by prettier. It applies no formatting to the code other than reordering the Tailwind classes found within any HTML class attributes.
+`prettier-plugin-tailwindcss-extra-plus` is a [prettier](https://prettier.io) plugin that uses [prettier-plugin-tailwindcss](https://tailwindcss.com/blog/automatic-class-sorting-with-prettier) to enforce the [recommended Tailwind class order](https://tailwindcss.com/blog/automatic-class-sorting-with-prettier#how-classes-are-sorted) for a set of extra languages that are not yet supported by prettier. It applies no formatting to the code other than reordering the Tailwind classes found within any HTML class attributes.
 
 This plugin is intended to be an interim solution. Languages will be dropped whenever official prettier plugins are developed.
 
@@ -18,9 +18,9 @@ Install to project:
 
 ```sh
 # npm
-npm install -D prettier prettier-plugin-tailwindcss prettier-plugin-tailwindcss-extra
+npm install -D prettier prettier-plugin-tailwindcss prettier-plugin-tailwindcss-extra-plus
 # pnpm
-pnpm add -D prettier prettier-plugin-tailwindcss prettier-plugin-tailwindcss-extra
+pnpm add -D prettier prettier-plugin-tailwindcss prettier-plugin-tailwindcss-extra-plus
 ```
 
 Then add to prettier plugins in `.prettierrc.json` or similar:
@@ -28,7 +28,7 @@ Then add to prettier plugins in `.prettierrc.json` or similar:
 ```json
 {
   "plugins": [
-    "prettier-plugin-tailwindcss-extra",
+    "prettier-plugin-tailwindcss-extra-plus",
     "prettier-plugin-tailwindcss"
   ]
 }
@@ -43,13 +43,13 @@ You can configure prettier to use the parser from this plugin on your filetype o
 ```json
 {
   "plugins": [
-    "prettier-plugin-tailwindcss-extra",
+    "prettier-plugin-tailwindcss-extra-plus",
     "prettier-plugin-tailwindcss"
   ],
   "overrides": [
     {
       "files": "*.ext",
-      "options": { "parser": "tailwindcss-extra" }
+      "options": { "parser": "tailwindcss-extra-plus" }
     }
   ]
 }

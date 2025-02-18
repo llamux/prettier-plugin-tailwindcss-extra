@@ -21,7 +21,7 @@ interface ClassAttrNode extends BaseNode {
 export type AstNode = BlockNode | CodeNode | ClassAttrNode;
 
 export const classAttrRegex =
-  /class="[^"\\]*(?:\\.[^"\\]*)*"|class='[^'\\]*(?:\\.[^'\\]*)*'/g;
+  /(?<!:)\bclass="[^"\\]*(?:\\.[^"\\]*)*"|(?<!:)\bclass='[^'\\]*(?:\\.[^'\\]*)*'/g;
 
 export function parse(text: string, _: object): AstNode {
   const classAttrMatches = text.matchAll(classAttrRegex);

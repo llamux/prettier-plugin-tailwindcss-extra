@@ -10,7 +10,7 @@ const extensions = readdirSync(testsDir);
 
 async function format(text: string) {
   return prettier.format(text, {
-    parser: "tailwindcss-extra",
+    parser: "tailwindcss-extra-plus",
     plugins: [TailwindCSSExtraPlugin, TailwindCSSPlugin],
   });
 }
